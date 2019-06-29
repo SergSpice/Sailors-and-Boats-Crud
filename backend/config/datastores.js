@@ -53,7 +53,7 @@ module.exports.datastores = {
     port: 3306,
     user: 'root',
     password: 'shadowfax',
-    database: 'TallerBDD'
+    database: 'taller_bdd'
 
   },
 
