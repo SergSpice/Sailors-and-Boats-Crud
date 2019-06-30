@@ -9,7 +9,6 @@
 sudo apt install zsh
 
 ##Install curl
-
 sudo apt-get install curl
 
 ## Install OhMyZsh!
