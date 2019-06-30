@@ -1,27 +1,4 @@
-## Dependencias:
-
-#### ZSH (opcional)
-
-* Si utilizas una "terminal sin complementos" se recomienda el uso de OhMyZsh!. Para instalarlo utiliza el siguiente comando en tu terminal:
-
-```
-## Install Zsh
-sudo apt install zsh
-
-##Install curl
-sudo apt-get install curl
-
-## Install OhMyZsh!
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-## How to use
-zsh
-
-## Or make it your default shell!
-chsh -s $(which zsh)
-
-## Logout and log in
-```
+## Dependencias
 
 #### Docker
 
@@ -49,6 +26,32 @@ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
 ```
 
+## Dependencias entorno de desarrollo:
+
+#### ZSH (opcional)
+
+* Si utilizas una "terminal sin complementos" se recomienda el uso de OhMyZsh!. Para instalarlo utiliza el siguiente comando en tu terminal:
+
+```
+## Install Zsh
+sudo apt install zsh
+
+##Install curl
+sudo apt-get install curl
+
+## Install OhMyZsh!
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+## How to use
+zsh
+
+## Or make it your default shell!
+chsh -s $(which zsh)
+
+## Logout and log in
+```
+
+
 #### NVM para instalar node y npm
 
 ```
@@ -63,6 +66,16 @@ nvm install v10.16.0
 ## y finalmente
 nvm alias default v10.16.0
 
+```
+
+#### Angular y Sails
+
+```
+## Instalar Angular
+npm install -g @angular/cli
+
+## instalar Sails
+npm install sails -g
 ```
 
 ## Despliegue entorno de desarrollo
