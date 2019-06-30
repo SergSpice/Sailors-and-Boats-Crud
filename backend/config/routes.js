@@ -9,6 +9,20 @@
  */
 
 module.exports.routes = {
-
+  // Boats
+  'POST /boats': 'BoatsController.create',
+  'GET /boats': 'BoatsController.find',
+  'PATCH /boats/:id': 'BoatsController.update',
+  'DELETE /boats/:id': 'BoatsController.destroy',
+  // Reserves
+  'POST /reserves': 'ReservesController.create',
+  'GET /reserves': 'ReservesController.find',
+  'PATCH /reserves/:id': 'ReservesController.update',
+  'DELETE /reserves/:id': 'ReservesController.destroy',
+  // Sailors
+  'POST /sailors': 'SailorsController.create',
+  'GET /sailors': 'SailorsController.find',
+  'PATCH /sailors/:id': 'SailorsController.update',
+  'DELETE /sailors/:id': 'SailorsController.destroy',
 
 };
