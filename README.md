@@ -138,3 +138,5 @@ ng serve --open // la opcion --open abrirá la aplicacion automaticamente en el 
 ```
 
 ##### NOTA: Esto se hace la primera vez que se ejecuta el entorno. Despues solo es necesario ejecutar el paso 1, levantar sails con la opcion 3, y levantar angular.
+
+![picture](estructura_aplicación_taller_bdd.png)
