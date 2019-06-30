@@ -1,6 +1,13 @@
 ## Dependencias
 
+#### SO
+
+Vamos a usar cualquier distro de linux basado en debian como linux mint, MXLinux (personal favorite), ubuntu y derivados, o debian mismo. Por la sencilla razon de que docker
+vale cualquier tula en windows, y windows tambien.
+
 #### Docker
+Vamos a usar docker para levantar la base de datos en mariadb, y phpmyadmin como gestor, para no andar weando con xampp y otras mierdas que pueden pesentar
+problemas de compativilidad.
 
 ```
 ## Descargar docker en:
