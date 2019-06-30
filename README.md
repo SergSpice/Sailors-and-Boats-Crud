@@ -25,9 +25,9 @@ password: shadowfax
 
 * Desde la base de datos recien creada importar el archivo sailors_data.sql ubicado en 
 
-```
-/taller_bdd/backend/migrations/
-```
+
+`/taller_bdd/backend/migrations/`
+
 
 * Entrar a la carpeta 'backend' desde la consola y escribir los siguientes comandos:
 
