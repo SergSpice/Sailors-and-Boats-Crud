@@ -21,5 +21,15 @@ module.exports = {
       const sailors = await Sailors.destroyOne(id);
       
       return (sailors) ? res.deleted("Elimina3") : res.notFound();
+    },
+    getRaitingGraterThan: async function(req, res) {
+      const rating = req.param('p_rating');
+      const sailors = await Sailors.find().where({
+        rating: {
+          '>': rating
+        }
+      });
+
+      return res.json(sailors);
     }
   };

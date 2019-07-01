@@ -21,6 +21,14 @@ module.exports = {
       const boats = await Boats.destroyOne(id);
       
       return (boats) ? res.deleted("Elimina3") : res.notFound();
+    },
+    findByColor: async function(req, res){
+      const color = req.param('color');
+      const boats = await Boats.find({
+        color: color
+      });
+
+      return res.json(boats);
     }
   };
   

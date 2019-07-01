@@ -14,6 +14,7 @@ module.exports.routes = {
   'GET /boats': 'BoatsController.find',
   'PATCH /boats/:id': 'BoatsController.update',
   'DELETE /boats/:id': 'BoatsController.destroy',
+  'GET /boats/:color': 'BoatsController.findByColor',
   // Reserves
   'POST /reserves': 'ReservesController.create',
   'GET /reserves': 'ReservesController.find',
@@ -25,5 +26,5 @@ module.exports.routes = {
   'GET /sailors': 'SailorsController.find',
   'PATCH /sailors/:id': 'SailorsController.update',
   'DELETE /sailors/:id': 'SailorsController.destroy',
-
+  'GET /sailors/rating/:p_rating': 'SailorsController.getRaitingGraterThan'
 };
