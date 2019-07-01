@@ -39,5 +39,13 @@ module.exports = {
     var rawResult = await sails.sendNativeQuery(query, []);
 
     return res.json(rawResult.rows);
+  },
+  findBySailor: async function(req, res){
+    const sailor = req.param('id');
+    const reserves = await Reserves.find().where({
+      sid: sailor
+    }).populate('sid').populate('bid');
+    
+    return res.json(reserves);
   }
 };

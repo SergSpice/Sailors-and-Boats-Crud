@@ -23,7 +23,7 @@ module.exports = {
       return (boats) ? res.deleted("Elimina3") : res.notFound();
     },
     findByColor: async function(req, res){
-      const color = req.param('color');
+      const color = req.param('p_color');
       const boats = await Boats.find({
         color: color
       });
