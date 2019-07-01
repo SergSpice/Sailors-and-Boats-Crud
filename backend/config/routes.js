@@ -19,6 +19,7 @@ module.exports.routes = {
   'GET /reserves': 'ReservesController.find',
   'PATCH /reserves/:id': 'ReservesController.update',
   'DELETE /reserves/:id': 'ReservesController.destroy',
+  'GET /reserves/sailors-leased-all-boats': 'ReservesController.sailorWhoLeasedAllBoats',
   // Sailors
   'POST /sailors': 'SailorsController.create',
   'GET /sailors': 'SailorsController.find',
