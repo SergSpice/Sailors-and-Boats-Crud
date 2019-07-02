@@ -75,11 +75,11 @@ nvm alias default v10.16.0
 
 ```
 
-#### Angular y Sails
+#### Vue js y Sails
 
 ```
-## Instalar Angular
-npm install -g @angular/cli
+## Instalar Vue
+npm install -g @vue/cli 
 
 ## instalar Sails
 npm install sails -g
@@ -133,11 +133,11 @@ sails lift
 ## Instalar modulos
 npm install
 
-## Levantar aplicación angular en modo desarrollo
-ng serve --open // la opcion --open abrirá la aplicacion automaticamente en el navegador
+## Levantar aplicación Vue en modo desarrollo
+npm run prod
 ```
 
-##### NOTA: Esto se hace la primera vez que se ejecuta el entorno. Despues solo es necesario ejecutar el paso 1, levantar sails con la opcion 3, y levantar angular.
+##### NOTA: Esto se hace la primera vez que se ejecuta el entorno. Despues solo es necesario ejecutar el paso 1, levantar sails con la opcion 3, y levantar Vue.
 
 ## Representación grafica de la "Weaita"
 
