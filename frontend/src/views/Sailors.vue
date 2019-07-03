@@ -98,7 +98,12 @@ export default {
     save(key) {
       const newData = [...this.data];
       const target = newData.filter(item => key === item.id)[0];
-      // aca le metes el update
+
+      axios
+      .put(`http://localhost:1337/sailors/${target.id}`, {sname: target.sname, rating:target.rating, age:target.age})
+      .then(response => {
+        console.log(response);
+      });
       if (target) {
         delete target.editable;
         this.data = newData;
