@@ -1,11 +1,6 @@
 <template>
   <a-table :columns="columns" :dataSource="data" bordered size="small" rowKey="id">
-    <template
-      v-for="col in ['sname', 'rating', 'age']"
-      :slot="col"
-      
-      slot-scope="text, record"
-    >
+    <template v-for="col in ['sname', 'rating', 'age']" :slot="col" slot-scope="text, record">
       <div :key="col">
         <a-input
           v-if="record.editable"
@@ -27,12 +22,19 @@
         <span v-else>
           <a @click="() => edit(record.id)">Edit</a>
         </span>
+        <a-popconfirm
+          v-if="data.length"
+          title="Sure to delete?"
+          @confirm="() => onDelete(record.id)"
+        >
+          <a href="javascript:;">Delete</a>
+        </a-popconfirm>
       </div>
     </template>
   </a-table>
 </template>
 <script>
-import axios from 'axios'
+import axios from "axios";
 
 const columns = [
   {
@@ -100,10 +102,14 @@ export default {
       const target = newData.filter(item => key === item.id)[0];
 
       axios
-      .put(`http://localhost:1337/sailors/${target.id}`, {sname: target.sname, rating:target.rating, age:target.age})
-      .then(response => {
-        console.log(response);
-      });
+        .put(`http://localhost:1337/sailors/${target.id}`, {
+          sname: target.sname,
+          rating: target.rating,
+          age: target.age
+        })
+        .then(response => {
+          console.log(response);
+        });
       if (target) {
         delete target.editable;
         this.data = newData;
@@ -121,6 +127,17 @@ export default {
         delete target.editable;
         this.data = newData;
       }
+    },
+    onDelete(key) {
+      const newData = [...this.data]
+      this.data = newData.filter(item => item.id !== key)
+      const target = newData.filter(item => item.id === key)[0];
+      console.log(target.id);
+      axios
+        .delete(`http://localhost:1337/sailors/${target.id}`)
+        .then(response => {
+          console.log(response);
+        });
     }
   },
   created() {
