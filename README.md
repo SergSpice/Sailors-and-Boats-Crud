@@ -141,4 +141,4 @@ npm run prod
 
 ## Representación grafica de la "Weaita"
 
-![picture](estructura_aplicación_taller_bdd.png)
+![picture](estructura_aplicación_taller_bdd__1_.png)
