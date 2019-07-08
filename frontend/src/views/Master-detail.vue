@@ -92,7 +92,6 @@ export default {
   },
   created() {
     this.fetchSailors();
-    console.log(this.fetchedReserves);
   },
   methods: {
     fetchSailors() {
@@ -101,7 +100,6 @@ export default {
       });
     },
     changeActivekey(key) {
-      console.log(key);
     },
     handleChange(value) {
       axios
@@ -114,7 +112,6 @@ export default {
         });
     },
     handleFocus() {
-      console.log("focus");
     },
     filterOption(input, option) {
       return (

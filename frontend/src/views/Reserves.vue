@@ -117,7 +117,6 @@ export default {
     save(key) {
       const newData = [...this.data];
       const target = newData.filter(item => key === item.id)[0];
-      console.log(Date.parse(target.day));
       axios
         .patch(`http://localhost:1337/reserves/${target.id}`, {
           day: Date.parse(target.day),
@@ -125,7 +124,6 @@ export default {
           bid: target.bid
         })
         .then(response => {
-          console.log(response);
         });
       if (target) {
         delete target.editable;
@@ -143,7 +141,6 @@ export default {
       axios
         .delete(`http://localhost:1337/reserves/${target.id}`)
         .then(response => {
-          console.log(response);
         });
     },
     showModal () {
@@ -165,7 +162,6 @@ export default {
           bid: values.bid
         })
         .then(response => {
-          console.log(response);
           this.fetchReserve();
         });
         form.resetFields();

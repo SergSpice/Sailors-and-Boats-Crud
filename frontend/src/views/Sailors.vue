@@ -122,7 +122,6 @@ export default {
           age: target.age
         })
         .then(response => {
-          console.log(response);
         });
       if (target) {
         delete target.editable;
@@ -140,7 +139,6 @@ export default {
       axios
         .delete(`http://localhost:1337/sailors/${target.id}`)
         .then(response => {
-          console.log(response);
         });
     },
     showModal() {
@@ -162,7 +160,6 @@ export default {
             age: values.age
           })
           .then(response => {
-            console.log(response);
             this.fetchSailors();
           });
         form.resetFields();
