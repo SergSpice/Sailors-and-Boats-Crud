@@ -19,6 +19,9 @@ module.exports = {
   destroy: async function (req, res) {
     const id = req.param('id');
     const sailors = await Sailors.destroyOne(id);
+    await Reserves.destroy().where({
+      sid: id
+    });
 
     return (sailors) ? res.deleted("Elimina3") : res.notFound();
   },

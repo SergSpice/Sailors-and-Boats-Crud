@@ -23,7 +23,7 @@
       <a-alert
         v-else
         message="Error"
-        description="SQL Query no pudo ser ejecutada :c"
+        description="No existe ningun sailor que ha arrendado todos los boats :c"
         type="error"
         showIcon
       />
