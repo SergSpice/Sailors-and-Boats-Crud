@@ -36,19 +36,19 @@
         :headStyle="headStyle"
       >
         <p>
-          <strong>ID:</strong>
+          <strong>ID: </strong>
           {{ sailors.id }}
         </p>
         <p>
-          <strong>Name:</strong>
+          <strong>Name: </strong>
           {{sailors.sname}}
         </p>
         <p>
-          <strong>Rating:</strong>
+          <strong>Rating: </strong>
           {{sailors.rating}}
         </p>
         <p>
-          <strong>Age:</strong>
+          <strong>Age: </strong>
           {{sailors.age}}
         </p>
       </a-card>
