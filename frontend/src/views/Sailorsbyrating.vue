@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="alerts">
-      <a-alert v-if="alerInfo === 0 " message="Filtrar boats por color" type="info" showIcon />
-      <a-alert v-else-if="listedBoats.length !== 0" message="Boats encontrados!" type="success" showIcon />
-      <a-alert v-else message="No existe ningun boat con ese color!" type="error" showIcon />
+      <a-alert v-if="alerInfo === 0 " message="Filtrar sailors por un rating mayor al ingresado" type="info" showIcon />
+      <a-alert v-else-if="listedBoats.length !== 0" message="Sailors encontrados!" type="success" showIcon />
+      <a-alert v-else message="No existe ningun sailor con un tal rating" type="error" showIcon />
     </div>
     <div class="search">
       <a-input-search type="number" :min="1" placeholder="input search text" style="width: 200px" @search="onSearch" />
