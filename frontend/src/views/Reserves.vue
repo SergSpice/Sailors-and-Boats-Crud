@@ -90,7 +90,7 @@ export default {
     };
   },
   methods: {
-    fetchSailors() {
+    fetchReserve() {
       axios.get("http://localhost:1337/reserves").then(response => {
         this.data = response.data
         this.data.forEach(item => {
@@ -134,7 +134,7 @@ export default {
       }
     },
     cancel(key) {
-      this.fetchSailors();
+      this.fetchReserve();
     },
     onDelete(key) {
       const newData = [...this.data];
@@ -158,8 +158,6 @@ export default {
         if (err) {
           return;
         }
-        console.log(values.day._d.getTime());
-        console.log(values);
         axios
         .post(`http://localhost:1337/reserves/`, {
           day: values.day._d.getTime(),
@@ -168,7 +166,7 @@ export default {
         })
         .then(response => {
           console.log(response);
-          this.fetchSailors();
+          this.fetchReserve();
         });
         form.resetFields();
         this.visible = false;
@@ -176,7 +174,7 @@ export default {
     },
   },
   created() {
-    this.fetchSailors();
+    this.fetchReserve();
   }
 };
 </script>

@@ -5,7 +5,7 @@ module.exports = {
       return res.json(boats);
     },
     create: async function(req, res) {
-      const boats = await Boats.create(req.allParams()).fetch();
+    const boats = await Boats.create(req.allParams()).fetch();
   
       return res.created(boats);
     },

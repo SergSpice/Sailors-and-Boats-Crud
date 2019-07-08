@@ -46,14 +46,14 @@
 </template>
 <script>
 import axios from "axios";
-import CollectionCreateForm from '../components/AddSailorModal.vue'
+import CollectionCreateForm from "../components/AddSailorModal.vue";
 
 const columns = [
   {
     title: "ID",
     dataIndex: "id",
     width: "10%",
-    scopedSlots: { customRender: "id" },
+    scopedSlots: { customRender: "id" }
   },
   {
     title: "Name",
@@ -143,32 +143,32 @@ export default {
           console.log(response);
         });
     },
-    showModal () {
+    showModal() {
       this.visible = true;
     },
-    handleCancel  () {
+    handleCancel() {
       this.visible = false;
     },
-    handleCreate  () {
+    handleCreate() {
       const form = this.$refs.collectionForm.form;
       form.validateFields((err, values) => {
         if (err) {
           return;
         }
         axios
-        .post(`http://localhost:1337/sailors/`, {
-          sname: values.sname,
-          rating: values.rating,
-          age: values.age
-        })
-        .then(response => {
-          console.log(response);
-          this.fetchSailors();
-        });
+          .post(`http://localhost:1337/sailors/`, {
+            sname: values.sname,
+            rating: values.rating,
+            age: values.age
+          })
+          .then(response => {
+            console.log(response);
+            this.fetchSailors();
+          });
         form.resetFields();
         this.visible = false;
       });
-    },
+    }
   },
   created() {
     this.fetchSailors();
