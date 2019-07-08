@@ -109,14 +109,7 @@ password: shadowfax
 
 3. Crear una base de datos llamada "taller_bdd"
 
-
-4. Desde la base de datos recien creada importar el archivo sailors_data.sql ubicado en 
-
-
-`/taller_bdd/backend/migrations/`
-
-
-5. Entrar a la carpeta 'backend' desde la consola y escribir los siguientes comandos:
+4. Entrar a la carpeta 'backend' desde la consola y escribir los siguientes comandos:
 
 
 ```
@@ -127,6 +120,12 @@ npm install
 sails lift
 ```
 
+5. Desde la base de datos recien creada importar el archivo sailors_data.sql ubicado en 
+
+
+`/taller_bdd/backend/migrations/`
+
+
 6. Entrar a la carpeta frontend desde otra consola y escribir los siguientes comandos:
 
 ```
@@ -134,11 +133,11 @@ sails lift
 npm install
 
 ## Levantar aplicación Vue en modo desarrollo
-npm run prod
+npm run serve
 ```
 
 ##### NOTA: Esto se hace la primera vez que se ejecuta el entorno. Despues solo es necesario ejecutar el paso 1, levantar sails con la opcion 3, y levantar Vue.
 
 ## Representación grafica de la "Weaita"
 
-![picture](estructura_aplicación_taller_bdd.png)
+![picture](estructura_aplicación_taller_empresa__1_.png)
