@@ -5,8 +5,7 @@
 Vamos a usar cualquier distro de linux basado en debian como linux mint, MXLinux (personal favorite), ubuntu y derivados, o debian mismo.
 
 #### Docker
-Usaremos docker para levantar la base de datos en mariadb, y phpmyadmin como gestor, para no andar weando con xampp y otras mierdas que pueden pesentar
-problemas de compatibilidad.
+Usaremos docker para levantar la base de datos en mariadb, y phpmyadmin como gestor, para no presentar problemas de compatibilidad con sistemas operativos host.
 
 ```
 ## Descargar docker en:
