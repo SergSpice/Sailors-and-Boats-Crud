@@ -2,12 +2,11 @@
 
 #### SO
 
-Vamos a usar cualquier distro de linux basado en debian como linux mint, MXLinux (personal favorite), ubuntu y derivados, o debian mismo. Por la sencilla razon de que docker
-vale cualquier tula en windows, y windows tambien.
+Vamos a usar cualquier distro de linux basado en debian como linux mint, MXLinux (personal favorite), ubuntu y derivados, o debian mismo.
 
 #### Docker
 Usaremos docker para levantar la base de datos en mariadb, y phpmyadmin como gestor, para no andar weando con xampp y otras mierdas que pueden pesentar
-problemas de compativilidad.
+problemas de compatibilidad.
 
 ```
 ## Descargar docker en:
@@ -138,6 +137,6 @@ npm run serve
 
 ##### NOTA: Esto se hace la primera vez que se ejecuta el entorno. Despues solo es necesario ejecutar el paso 1, levantar sails con la opcion 3, y levantar Vue.
 
-## Representación grafica de la "Weaita"
+## Representación grafica de la arquitectura del proyecto.
 
 ![picture](estructura_aplicación_taller_empresa__1_.png)
